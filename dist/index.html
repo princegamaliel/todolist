@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <link
+      href="https://fonts.googleapis.com/css?family=Poppins:400,700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="styles/global-style.css" />
+    <title>ToDo List</title>
+  </head>
+  <body>
+    <div class="container">
+      <!-- +header -->
+      <header class="header">
+        <div class="menuBtn">
+          <div class="bar"></div>
+          <div class="bar"></div>
+          <div class="bar"></div>
+        </div>
+        <h1 class="logo">ToDoList</h1>
+      </header>
+      <!-- -header -->
+      <!-- +content wrapper -->
+      <div class="content-wrapper">
+        <!-- +projects menu -->
+        <section class="projects-menu">
+          <h2 class="title">Projects</h2>
+          <h3 class="current-project title-separator">Default</h3>
+          <button class="button" id="new-prj-btn">New Project</button>
+          <div class="project-list-container">
+            <h3 class="title title-separator">Project List</h3>
+            <div class="project-list">
+              <!-- +project element -->
+              <!--  -project element -->
+            </div>
+          </div>
+        </section>
+        <!-- -projects menu -->
+        <!-- +main -->
+        <main class="main">
+          <h2 class="title">
+            <span class="opened-prj">Current</span> Todo List
+          </h2>
+          <button class="button add-todo" id="new-todo-btn">+</button>
+          <div class="todo-list">
+            <!-- +todo-item -->
+            <!-- -todo-item -->
+          </div>
+        </main>
+        <!-- -main -->
+      </div>
+      <!-- -content wrapper -->
+    </div>
+    <!-- +create new project modal -->
+    <div class="modal-wrapper display-none">
+      <div class="new-project modal">
+        <div class="modal-title"><h2>New Project</h2></div>
+        <div class="modal-content">
+          <label id="new-project-name-label" for="new-project-name"
+            >Project Name</label
+          >
+          <input type="text" id="new-project-name" />
+        </div>
+        <div class="modal-options">
+          <button class="button cancel">Cancel</button>
+          <button class="button create">Create</button>
+        </div>
+      </div>
+    </div>
+    <!-- -create new project modal -->
+    <!-- +create todo item modal -->
+    <div class="modal-wrapper display-none">
+      <div class="new-todo modal">
+        <div class="modal-title"><h2>New ToDo</h2></div>
+        <div class="modal-content">
+          <label id="new-todo-title-label" for="new-todo-title">Title</label>
+          <input type="text" id="new-todo-title" />
+          <label id="new-due-date-label" for="new-due-date">Due Date</label>
+          <input type="date" id="new-due-date" />
+          <label id="new-description-label" for="new-description"
+            >Description</label
+          >
+          <textarea id="new-description" rows="6">Fool</textarea>
+          <label id="new-priority-label" for="new-priority">Priority</label>
+          <select id="new-priority">
+            <option value="high">High</option>
+            <option value="medium">Medium</option>
+            <option value="low">Low</option>
+          </select>
+        </div>
+        <div class="modal-options">
+          <button class="button cancel">Cancel</button>
+          <button class="button create">Create</button>
+        </div>
+      </div>
+    </div>
+    <!-- -create todo item modal -->
+    <!-- + edit todo item modal -->
+    <div class="modal-wrapper display-none">
+      <div class="edit-todo modal">
+        <div class="modal-title"><h2>Edit ToDo</h2></div>
+        <div class="modal-content">
+          <label id="edit-todo-title-label" for="edit-todo-title">Title</label>
+          <input type="text" id="edit-todo-title" />
+          <label id="edit-due-date-label" for="edit-due-date">Due Date</label>
+          <input type="date" id="edit-due-date" />
+          <label id="edit-description-label" for="edit-description"
+            >Description</label
+          >
+          <textarea id="edit-description" rows="6"></textarea>
+          <label id="edit-priority-label" for="edit-priority">Priority</label>
+          <select id="edit-priority">
+            <option value="high">High</option>
+            <option value="medium">Medium</option>
+            <option value="low">Low</option>
+          </select>
+        </div>
+        <div class="modal-options">
+          <button class="button cancel">Cancel</button>
+          <button class="button edit">Edit</button>
+        </div>
+      </div>
+    </div>
+    <!-- -edit todo item modal -->
+    <!-- +todo-info modal -->
+    <div class="modal-wrapper display-none">
+      <div class="info-todo modal">
+        <div class="modal-title"><h2>Info ToDo</h2></div>
+        <div class="modal-content">
+          <div class="todo-title todo-info">
+            <h3>Title</h3>
+            <h2 id="info-todo-title">Create Todo List</h2>
+          </div>
+          <div class="todo-date todo-info">
+            <h3>Due Date</h3>
+            <h2 id="info-due-date">27.10.2019</h2>
+          </div>
+          <div class="todo-description todo-info">
+            <h3>Description</h3>
+            <p id="info-description"></p>
+          </div>
+          <div class="todo-priority todo-info">
+            <h3>Priority</h3>
+            <h2 id="info-priority">High</h2>
+          </div>
+        </div>
+        <div class="modal-options">
+          <button class="button cancel">Cancel</button>
+        </div>
+      </div>
+    </div>
+    <!-- -todo-info modal -->
+    <!-- +create new project modal -->
+    <div class="modal-wrapper display-none">
+      <div class="confirmation modal">
+        <div class="modal-title"><h2>Are you sure?</h2></div>
+        <div class="modal-content">
+          <button class="button no-btn">No</button>
+          <button class="button yes-btn">Yes</button>
+        </div>
+      </div>
+    </div>
+    <!-- -create new project modal -->
+    <script src="main.js"></script>
+  </body>
+</html>

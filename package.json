@@ -1,0 +1,27 @@
+{
+  "name": "todo-list",
+  "version": "1.0.0",
+  "description": "Todo List project from TOP",
+  "private": true,
+  "scripts": {
+    "build": "webpack",
+    "watch": "webpack --watch"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/igorashs/todo-list.git"
+  },
+  "author": "igorash",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/igorashs/todo-list/issues"
+  },
+  "homepage": "https://github.com/igorashs/todo-list#readme",
+  "devDependencies": {
+    "webpack": "^4.41.2",
+    "webpack-cli": "^3.3.10"
+  },
+  "dependencies": {
+    "date-fns": "^2.2.1"
+  }
+}
