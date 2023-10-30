@@ -3,7 +3,7 @@ ToDoList Project
 
  
 
-> - https://webgamaliel.github.io/todolist
+> - https://princegamaliel.github.io/todolist
 
 ## Project
 
